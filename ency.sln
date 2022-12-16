@@ -15,11 +15,13 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "webapp", "src\webapps\webcl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "identity", "identity", "{D3B22162-BC98-46FC-8D1C-0C01369AB24E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.App", "src\services\identity\Identity.App\Identity.App.csproj", "{0E97547A-194D-450B-9137-C12D336DAA7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.App", "src\services\identity\Identity.App\Identity.App.csproj", "{0E97547A-194D-450B-9137-C12D336DAA7C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "catalog", "catalog", "{FCD8A941-F27B-45DA-A3A7-4315350C151D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.App", "src\services\catalog\Catalog.App\Catalog.App.csproj", "{AE051EBA-9A62-4B7D-AF79-4D7FA21F5250}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.App", "src\services\catalog\Catalog.App\Catalog.App.csproj", "{AE051EBA-9A62-4B7D-AF79-4D7FA21F5250}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7194C757-6A01-410B-A8C1-BE994D003970}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{AE051EBA-9A62-4B7D-AF79-4D7FA21F5250}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE051EBA-9A62-4B7D-AF79-4D7FA21F5250}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE051EBA-9A62-4B7D-AF79-4D7FA21F5250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7194C757-6A01-410B-A8C1-BE994D003970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7194C757-6A01-410B-A8C1-BE994D003970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7194C757-6A01-410B-A8C1-BE994D003970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7194C757-6A01-410B-A8C1-BE994D003970}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

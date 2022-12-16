@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  identity.app:
+    image: ${DOCKER_REGISTRY-}identityapp
+    build:
+      context: .
+      dockerfile: src/services/identity/Identity.App/Dockerfile
+    ports:
+      - 30004:80
+
+  catalog.app:
+    image: ${DOCKER_REGISTRY-}catalogapp
+    build:
+      context: .
+      dockerfile: src/services/catalog/Catalog.App/Dockerfile
+    ports:
+      - 30005:80
+
