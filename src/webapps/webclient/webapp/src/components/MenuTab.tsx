@@ -7,15 +7,7 @@ interface IMenuTabPane {
 }
 
 const MenuTabPane: FC<IMenuTabPane> = ({ children }): JSX.Element => (
-  <Box
-    sx={{ 
-      borderTopColor: "headerBackground",
-      borderTopWidth: "1px",
-      borderTopStyle: "solid",
-    }}
-  >
-    {children}
-  </Box>
+  <Box sx={{}}>{children}</Box>
 );
 
 interface IMenuTabTitle {
@@ -44,7 +36,7 @@ const MenuTabTitle: FC<IMenuTabTitle> = (props) => {
     >
       <Text
         sx={{
-          fontWeight: "500",
+          fontWeight: "bold",
           fontSize: "13px",
           color: isActive ? "black" : "appBackground",
         }}
