@@ -13,6 +13,7 @@ export const theme: Theme = {
     commandBackground: "#EBEEF4",
     headerBackground: "#EDEFF4",
     infoBackground: "#F2F2F2",
+    borderColor:"#dee2e6"
   },
   styles: {
     root: {

@@ -28,8 +28,9 @@ const MenuTabTitle: FC<IMenuTabTitle> = (props) => {
     <Box
       sx={{
         backgroundColor: isActive ? "white" : "menuBackground",
+        height:"32px",
+        lineHeight:"32px",
         paddingX: "6px",
-        paddingY: "4px",
         cursor: "pointer",
       }}
       onClick={handleClick}
@@ -64,7 +65,6 @@ const MenuTab: FC<IMenuTab> = (props) => {
         sx={{
           display: "flex",
           flexDirection: "row",
-          alignItems: "center",
           gap: "2px",
           backgroundColor: "white",
         }}

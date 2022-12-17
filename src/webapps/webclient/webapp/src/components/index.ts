@@ -1,3 +1,5 @@
 export * from "./MainLayout"
 export * from "./Header"
 export * from "./MenuTab"
+export * from "./DataGrid"
+export * from "./CustomerDataGrid"
