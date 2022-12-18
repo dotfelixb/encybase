@@ -1,8 +1,9 @@
 import React, { FC, ReactElement, useCallback, useState } from "react";
+import { Link } from "react-router-dom";
 import { Box, Text } from "theme-ui";
 
 interface IPageTabPane {
-  title: string;
+  title: string;  
   children: ReactElement | ReactElement[];
 }
 
@@ -12,7 +13,7 @@ const PageTabPane: FC<IPageTabPane> = ({ children }): JSX.Element => (
 
 interface IPageTabTitle {
   title: string;
-  index: number;
+  index: number; 
   setSelectedTab: (index: number) => void;
   isActive?: boolean;
 }
@@ -25,26 +26,28 @@ const PageTabTitle: FC<IPageTabTitle> = (props) => {
   }, [setSelectedTab, index]);
 
   return (
-    <Box
-      sx={{
-        backgroundColor: isActive ? "white" : "menuBackground",
-        height:"32px",
-        lineHeight:"32px",
-        paddingX: "6px",
-        cursor: "pointer",
-      }}
-      onClick={handleClick}
-    >
-      <Text
+    <Link to={`?tab=${index}`} preventScrollReset={true}>
+      <Box
         sx={{
-          fontWeight: "bold",
-          fontSize: "13px",
-          color: isActive ? "black" : "appBackground",
+          backgroundColor: isActive ? "white" : "menuBackground",
+          height: "32px",
+          lineHeight: "32px",
+          paddingX: "6px",
+          cursor: "pointer",
         }}
+        onClick={handleClick}
       >
-        {title}
-      </Text>
-    </Box>
+        <Text
+          sx={{
+            fontWeight: "bold",
+            fontSize: "13px",
+            color: isActive ? "black" : "appBackground",
+          }}
+        >
+          {title}
+        </Text>
+      </Box>
+    </Link>
   );
 };
 
@@ -84,4 +87,4 @@ const PageTab: FC<IPageTab> = (props) => {
   );
 };
 
-export { PageTab , PageTabPane  };
+export { PageTab, PageTabPane };
