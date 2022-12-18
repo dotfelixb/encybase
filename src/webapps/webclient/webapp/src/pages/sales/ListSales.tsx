@@ -1,28 +1,28 @@
 import React, { FC } from "react";
 import { Box } from "theme-ui";
-import { CustomerDataGrid,  Header, MenuTab, MenuTabPane } from "../../components";
+import { CustomerDataGrid,  Header, PageTab, PageTabPane } from "../../components";
 
 interface IListSales {}
 
 export const ListSales: FC<IListSales> = () => (
   <Box sx={{ display: "flex", flexDirection: "column" }}>
     <Header label="Sales" />
-    <MenuTab>
-      <MenuTabPane title="Customer">
+    <PageTab>
+      <PageTabPane title="Overview">
+        <div>Sales Overview</div>
+      </PageTabPane>
+      <PageTabPane title="Sales Entries">
+        <div>All Sales Transactions</div>
+      </PageTabPane>
+      <PageTabPane title="Customer">
         <CustomerDataGrid />
-      </MenuTabPane>
-      <MenuTabPane title="Overview">
-        <div>Overview</div>
-      </MenuTabPane>
-      <MenuTabPane title="All Sales">
-        <div>All Sales</div>
-      </MenuTabPane>
-      <MenuTabPane title="Payment">
+      </PageTabPane>
+      <PageTabPane title="Payment">
         <div>Payment</div>
-      </MenuTabPane>
-      <MenuTabPane title="Products & Services">
+      </PageTabPane>
+      <PageTabPane title="Products & Services">
         <div>Products</div>
-      </MenuTabPane>
-    </MenuTab>
+      </PageTabPane>
+    </PageTab>
   </Box>
 );

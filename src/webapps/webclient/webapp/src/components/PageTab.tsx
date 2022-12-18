@@ -1,23 +1,23 @@
 import React, { FC, ReactElement, useCallback, useState } from "react";
 import { Box, Text } from "theme-ui";
 
-interface IMenuTabPane {
+interface IPageTabPane {
   title: string;
   children: ReactElement | ReactElement[];
 }
 
-const MenuTabPane: FC<IMenuTabPane> = ({ children }): JSX.Element => (
+const PageTabPane: FC<IPageTabPane> = ({ children }): JSX.Element => (
   <Box sx={{}}>{children}</Box>
 );
 
-interface IMenuTabTitle {
+interface IPageTabTitle {
   title: string;
   index: number;
   setSelectedTab: (index: number) => void;
   isActive?: boolean;
 }
 
-const MenuTabTitle: FC<IMenuTabTitle> = (props) => {
+const PageTabTitle: FC<IPageTabTitle> = (props) => {
   const { title, index, setSelectedTab, isActive } = props;
 
   const handleClick = useCallback(() => {
@@ -48,12 +48,12 @@ const MenuTabTitle: FC<IMenuTabTitle> = (props) => {
   );
 };
 
-interface IMenuTab {
-  children: ReactElement<IMenuTabTitle>[];
+interface IPageTab {
+  children: ReactElement<IPageTabTitle>[];
   preSelectedIndex?: number;
 }
 
-const MenuTab: FC<IMenuTab> = (props) => {
+const PageTab: FC<IPageTab> = (props) => {
   const { children, preSelectedIndex } = props;
   const [selectedTabIndex, setSelectedTabIndex] = useState<number>(
     preSelectedIndex || 0
@@ -70,7 +70,7 @@ const MenuTab: FC<IMenuTab> = (props) => {
         }}
       >
         {children.map((item, index) => (
-          <MenuTabTitle
+          <PageTabTitle
             key={item.props.title}
             title={item.props.title}
             index={index}
@@ -84,4 +84,4 @@ const MenuTab: FC<IMenuTab> = (props) => {
   );
 };
 
-export { MenuTab, MenuTabPane };
+export { PageTab , PageTabPane  };
