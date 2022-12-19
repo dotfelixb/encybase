@@ -10,12 +10,12 @@ export const Header: FC<IHeader> = ({ label }) => {
     <Box
       sx={{
         backgroundColor: "headerBackground",
-        paddingX: "8px",
-        paddingY: "12px",
+        paddingX: 2,
+        paddingY: 3,
       }}
     >
         <Box sx={{height:"38px"}} />
-      <Text sx={{ fontWeight: "bold", fontSize: "22px", color: "#666" }}>
+      <Text sx={{ fontWeight: "bold", fontSize: 4, color: "#666" }}>
         {label}
       </Text>
     </Box>

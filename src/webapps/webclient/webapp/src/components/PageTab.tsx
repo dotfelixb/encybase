@@ -32,7 +32,7 @@ const PageTabTitle: FC<IPageTabTitle> = (props) => {
           backgroundColor: isActive ? "white" : "menuBackground",
           height: "32px",
           lineHeight: "32px",
-          paddingX: "6px",
+          paddingX: 2,
           cursor: "pointer",
         }}
         onClick={handleClick}
@@ -40,7 +40,7 @@ const PageTabTitle: FC<IPageTabTitle> = (props) => {
         <Text
           sx={{
             fontWeight: "bold",
-            fontSize: "13px",
+            fontSize: 0,
             color: isActive ? "black" : "appBackground",
           }}
         >

@@ -82,7 +82,7 @@ export const MainLayout: FC<IMainLayout> = ({ children }) => {
             backgroundColor: "infoBackground",
           }}
         >
-          <Box sx={{ flex: 1, padding: "4px" }}>{navs}</Box>
+          <Box sx={{ flex: 1, padding: 1 }}>{navs}</Box>
         </Box>
         {/* content */}
         <Box sx={{ flex: 1 }}>

@@ -87,9 +87,9 @@ export const DataGrid: FC<IDataGrid> = (props) => {
           display: "flex",
           justifyContent: "space-between",
           gap: "4px",
-          padding: "4px",
+          padding: 1,
           fontWeight: "600",
-          fontSize: "12px",
+          fontSize: 0,
           alignItems: "center",
           borderColor: "menuBackground",
           borderWidth: 2,
@@ -112,7 +112,7 @@ export const DataGrid: FC<IDataGrid> = (props) => {
               sx={{
                 borderColor: "menuBackground",
                 backgroundColor: "white",
-                padding: "5px",
+                padding: 1,
                 borderRadius: 0,
               }}
             />
@@ -152,7 +152,7 @@ export const DataGrid: FC<IDataGrid> = (props) => {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          fontSize: "12px",
+          fontSize:0,
           fontWeight: "500",
           paddingX: 2,
           paddingY: 1,
