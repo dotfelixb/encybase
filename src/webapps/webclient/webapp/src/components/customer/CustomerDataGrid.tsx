@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Box, Text } from "theme-ui";
-import { DataGrid, DataGridHeader, DataGridHeaderItem } from "./DataGrid";
+import { DataGrid, DataGridHeader, DataGridHeaderItem } from "../DataGrid";
 
 interface ICustomerDataGrid {}
 

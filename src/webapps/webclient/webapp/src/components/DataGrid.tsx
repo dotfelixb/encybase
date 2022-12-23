@@ -75,7 +75,7 @@ export const DataGrid: FC<IDataGrid> = (props) => {
         display: "flex",
         flexDirection: "column",
         borderColor: "menuBackground",
-        borderWidth: 2,
+        borderWidth: 1,
         borderStyle: "solid",
       }}
       role="data grid"

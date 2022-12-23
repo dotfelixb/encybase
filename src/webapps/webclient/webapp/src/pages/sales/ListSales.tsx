@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import { useSearchParams } from "react-router-dom";
+import { FC } from "react";
 import { Box } from "theme-ui";
 import {
   CustomerDataGrid,
+  CustomerDetailView,
   Header,
   PageTab,
   PageTabPane,
@@ -11,21 +11,21 @@ import {
 interface IListSales {}
 
 export const ListSales: FC<IListSales> = () => {
-  const [searchParams] = useSearchParams()
-  const tab = searchParams.get("tab") ?? "0"
-  
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
       <Header label="Sales" />
-      <PageTab preSelectedIndex={+tab}>
+      <PageTab appendTab={true}>
         <PageTabPane title="Overview">
           <div>Sales Overview</div>
         </PageTabPane>
         <PageTabPane title="Sales Entries">
           <div>All Sales Transactions</div>
         </PageTabPane>
-        <PageTabPane title="Customer">
-          <CustomerDataGrid />
+        <PageTabPane title="Customers">
+          <div>
+            <CustomerDataGrid />
+            <CustomerDetailView />
+          </div>
         </PageTabPane>
         <PageTabPane title="Payment">
           <div>Payment</div>
