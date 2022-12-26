@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { FC, ReactElement } from "react";
-import { Box, Input, Text } from "theme-ui";
+import { Box, Button, Input, Text } from "theme-ui";
 
 /**
  * Command Bar
@@ -62,10 +62,10 @@ export const DataGrid: FC<IDataGrid> = (props) => {
   const DivBar = () => (
     <Box
       sx={{
-        height:"24px",
-        width:"2px",
+        height: "24px",
+        width: "2px",
         backgroundColor: "menuBackground",
-        marginX:1
+        marginX: 1,
       }}
     />
   );
@@ -118,11 +118,17 @@ export const DataGrid: FC<IDataGrid> = (props) => {
             />
           </Box>
           <DivBar />
-          <Box>{newLabel}</Box>
+          <Box>
+            <Button variant="command">{newLabel}</Button>
+          </Box>
           <DivBar />
-          <Box>Actions</Box>
+          <Box>
+            <Button variant="command">Actions</Button>
+          </Box>
           <DivBar />
-          <Box>Report</Box>
+          <Box>
+            <Button variant="command">Reports</Button>
+          </Box>
         </Box>
         {/* right side commands */}
         <Box sx={{ display: "flex", flexDirection: "row" }}>
@@ -152,7 +158,7 @@ export const DataGrid: FC<IDataGrid> = (props) => {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          fontSize:0,
+          fontSize: 0,
           fontWeight: "500",
           paddingX: 2,
           paddingY: 1,
