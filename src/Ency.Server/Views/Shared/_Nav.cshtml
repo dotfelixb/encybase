@@ -1,0 +1,24 @@
+﻿@using Ency.UIComponents.ViewComponents.Components.NavLinkButton;
+
+<ul>
+    <li class="hidden border-l-4 border-indigo-500">
+
+    </li>
+    <li>
+        @await Component.InvokeAsync(nameof(NavLinkButton), new NavLinkModel { Href = "/" , Label = "Dashboard", IconName = "speedometer-outline"})
+    </li>
+    <li>
+        @await Component.InvokeAsync(nameof(NavLinkButton), new NavLinkModel { Href = "/bank" , Label = "Bank", IconName = "cash-outline"})
+    </li>
+    <li>
+        @await Component.InvokeAsync(nameof(NavLinkButton), new NavLinkModel { Href = "/sales" , Label = "Sales", IconName = "flash-outline"})
+    </li>
+     <li>
+        @await Component.InvokeAsync(nameof(NavLinkButton), new NavLinkModel { Href = "/expenses" , Label = "Expenses", IconName = "card-outline"})
+    </li> 
+    <li>
+        @await Component.InvokeAsync(nameof(NavLinkButton), new NavLinkModel { Href = "/payroll" , Label = "Payroll", IconName = "today-outline"})
+    </li>
+
+</ul>
+ 

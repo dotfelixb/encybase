@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EncyBase</title>
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+</head>
+<body style="background-color: #f9f8f8;" class="box-border font-sans text-sm overflow-y-hidden">
+
+    @*main*@
+    <div class="flex flex-col h-screen border-transparent" aria-label="root">
+        @*header*@
+        <header style="height: 48px;" class="bg-social-100 px-3 py-3 drop-shadow-md border-b border-social-100">
+        </header>
+
+        <div class="flex flex-auto flex-row">
+            @*sidebar*@
+            <div style="width: 68px" class="flex-initial bg-white ">
+                @await Html.PartialAsync("_Nav")
+            </div>
+            <main class="relative w-full flex flex-auto px-3 py-3 overflow-y-auto">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        ion-icon {
+            font-size: 20px;
+        }
+    </style>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

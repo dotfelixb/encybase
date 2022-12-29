@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ency.UIComponents\Ency.UIComponents.csproj" />
+  </ItemGroup>
+
+	<Target Name="BuildCss" BeforeTargets="Compile;Build">
+		<!-- Ensure Node packages are installed -->
+		<Exec Command="npm install" />
+		
+		<!-- Build css and minify it -->
+		<Exec Command="npm run buildcss" />
+	</Target>
+
+</Project>

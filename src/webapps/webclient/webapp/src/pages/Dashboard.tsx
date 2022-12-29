@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Box, Button, Input } from "theme-ui";
-import { TextInput } from "../components";
+import { SelectInput, TextInput } from "../components";
 
 interface IDashboard {}
 
@@ -25,6 +25,11 @@ export const Dashboard: FC<IDashboard> = () => {
           password
           error
           errorMessage="Password not properly formed"
+        />
+        <SelectInput
+          label="Pick Direction"
+          data={["North", "East", "South", "West"]}
+          required
         />
       </Box>
     </div>

@@ -18,6 +18,12 @@ export const ListSales: FC<IListSales> = () => {
         <PageTabPane title="Overview">
           <div>Sales Overview</div>
         </PageTabPane>
+        <PageTabPane title="Invoice">
+          <div>Invoice</div>
+        </PageTabPane>
+        <PageTabPane title="Estimates">
+          <div>Estimates</div>
+        </PageTabPane>
         <PageTabPane title="Sales Entries">
           <div>All Sales Transactions</div>
         </PageTabPane>

@@ -1,0 +1,15 @@
+﻿@using Ency.UIComponents.Extensions;
+@using Ency.UIComponents.ViewComponents.Models;
+
+@model NavLinkModel
+
+<a href="@Model.Href">
+    <div class="w-full flex flex-col p-2 hover:bg-indigo-50 border-l-4 @Html.ActiveClass(Model.Label)">
+        <div class="flex  justify-center">
+            <ion-icon name="@Model.IconName"></ion-icon>
+        </div>
+        <div class="flex justify-center">
+            <span style="font-size: 11px;">@Model.Label</span>
+        </div>
+    </div>
+</a>
