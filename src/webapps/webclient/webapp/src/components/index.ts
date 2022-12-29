@@ -1,6 +1,0 @@
-export * from "./MainLayout"
-export * from "./Header"
-export * from "./PageTab"
-export * from "./DataGrid"
-export * from "./customer"
-export * from "./form"
