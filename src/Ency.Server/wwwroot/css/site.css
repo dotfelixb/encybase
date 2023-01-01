@@ -13,3 +13,7 @@
 .tab-active {
    @apply  bg-white;
 }
+
+.form-input{
+   @apply py-1 text-xs;
+}

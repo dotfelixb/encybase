@@ -4,32 +4,34 @@
 
 <div>Sales</div>
 
-<div>
-    @* tab header *@
-    <div x-data="tab">
-        <ul class="flex -mb-px" style="gap: 1px;">
-            <template x-for="(tab, index) in tabs" :key="tab">
-                <li>
-                    <a href="" class="tab-header inline-block"
-                        :class="selectedIndex === index ? 'tab-active' : 'tab-default'"
-                        x-on:click.prevent="onSelectedIndex(index)">
-                        <span x-text="tab"></span>
-                    </a>
-                </li>
-            </template>
-        </ul>
-        <div class="bg-white border ">
-            <div>Overview</div>
-            <div>Invoice</div>
-            <div>Sales</div>
+@* tab header *@
+<div role="tab" aria-label="page-tab" x-data="tabdata">
+    <ul class="flex -mb-px" style="gap: 1px;">
+        <template x-for="(tab, index) in tabs" :key="tab">
+            <li>
+                <a href="" class="tab-header inline-block"
+                    :class="selectedIndex === index ? 'tab-active' : 'tab-default'"
+                    x-on:click.prevent="onSelectedIndex(index)">
+                    <span x-text="tab"></span>
+                </a>
+            </li>
+        </template>
+    </ul>
+    <div class="bg-white border ">
+        <div x-show="selectedIndex === 0">Overview</div>
+        <div x-show="selectedIndex === 1">Invoice</div>
+        <div x-show="selectedIndex === 2">Sales</div>
+        <div x-show="selectedIndex === 3">
+            <div>Customers</div>
         </div>
+        <div x-show="selectedIndex === 4">Payments</div>
     </div>
 </div>
 
 @section Scripts{
 <script>
     document.addEventListener("alpine:init", () => {
-        Alpine.data("tab", () => (
+        Alpine.data("tabdata", () => (
             {
                 tabs: ['Overview', 'Invoice', 'Sales', 'Customers', 'Payments'],
                 selectedIndex: 0,

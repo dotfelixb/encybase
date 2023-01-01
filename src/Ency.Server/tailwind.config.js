@@ -38,6 +38,7 @@ module.exports = {
                 300: "#D8DFEA", /** menu */
                 400: "#EDEFF4", /** header */
                 500: "#3B5998", /** app bar */
+                600: "#F2F2F2", /** info */
                 900: "#313d56", /** button border */
             }
         }
