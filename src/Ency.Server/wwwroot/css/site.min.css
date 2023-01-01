@@ -637,8 +637,14 @@ select {
 .relative {
   position: relative;
 }
+.-mb-px {
+  margin-bottom: -1px;
+}
 .box-border {
   box-sizing: border-box;
+}
+.inline-block {
+  display: inline-block;
 }
 .flex {
   display: flex;
@@ -673,6 +679,9 @@ select {
 .overflow-y-hidden {
   overflow-y: hidden;
 }
+.border {
+  border-width: 1px;
+}
 .border-l-4 {
   border-left-width: 4px;
 }
@@ -683,6 +692,22 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(99 123 173 / var(--tw-border-opacity));
 }
+.border-social-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(235 238 244 / var(--tw-border-opacity));
+}
+.border-social-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(216 223 234 / var(--tw-border-opacity));
+}
+.border-social-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(237 239 244 / var(--tw-border-opacity));
+}
+.border-social-900 {
+  --tw-border-opacity: 1;
+  border-color: rgb(49 61 86 / var(--tw-border-opacity));
+}
 .border-transparent {
   border-color: transparent;
 }
@@ -690,13 +715,13 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
-.bg-social-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(99 123 173 / var(--tw-bg-opacity));
-}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-social-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 123 173 / var(--tw-bg-opacity));
 }
 .p-2 {
   padding: 0.5rem;
@@ -723,6 +748,32 @@ select {
   --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
+
+.tab-header {
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
+
+.tab-default {
+  --tw-bg-opacity: 1;
+  background-color: rgb(216 223 234 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(59 89 152 / var(--tw-text-opacity));
+}
+
+.tab-active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-indigo-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));

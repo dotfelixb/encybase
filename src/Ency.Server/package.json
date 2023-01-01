@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "buildcss": "postcss wwwroot/css/site.css -o wwwroot/css/site.min.css",
-    "watch:mac": "watch 'npm run buildcss' .",
-    "watch:win": "watch \"npm run buildcss\" .",
+    "watch:mac": "watch 'npm run buildcss' ./Views",
+    "watch:win": "watch \"npm run buildcss\" .\\Views",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

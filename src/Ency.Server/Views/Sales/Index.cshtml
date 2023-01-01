@@ -3,3 +3,48 @@
 }
 
 <div>Sales</div>
+
+<div>
+    @* tab header *@
+    <div x-data="tab">
+        <ul class="flex -mb-px" style="gap: 1px;">
+            <template x-for="(tab, index) in tabs" :key="tab">
+                <li>
+                    <a href="" class="tab-header inline-block"
+                        :class="selectedIndex === index ? 'tab-active' : 'tab-default'"
+                        x-on:click.prevent="onSelectedIndex(index)">
+                        <span x-text="tab"></span>
+                    </a>
+                </li>
+            </template>
+        </ul>
+        <div class="bg-white border ">
+            <div>Overview</div>
+            <div>Invoice</div>
+            <div>Sales</div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+<script>
+    document.addEventListener("alpine:init", () => {
+        Alpine.data("tab", () => (
+            {
+                tabs: ['Overview', 'Invoice', 'Sales', 'Customers', 'Payments'],
+                selectedIndex: 0,
+                init() {
+                    this.selectedIndex = +(new URLSearchParams(location.search).get('tab') || 0)
+                },
+                onSelectedIndex(index) {
+                    this.selectedIndex = index
+
+                    const url = new URL(window.location.href);
+                    url.searchParams.set('tab', index);
+                    history.pushState(null, document.title, url.toString());
+                }
+            }
+        ))
+    })
+</script>
+}

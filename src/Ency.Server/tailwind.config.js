@@ -13,6 +13,10 @@ module.exports = {
     ],
     safelist: [
         "border-social-100",
+        "border-social-200",
+        "border-social-300",
+        "border-social-400",
+        "border-social-900",
         "border-transparent"
        ],
     theme: {
@@ -33,6 +37,7 @@ module.exports = {
                 200: "#EBEEF4", /** command bar*/
                 300: "#D8DFEA", /** menu */
                 400: "#EDEFF4", /** header */
+                500: "#3B5998", /** app bar */
                 900: "#313d56", /** button border */
             }
         }

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.tab-header {
+   @apply font-bold text-xs px-3 py-2 border-l border-t border-r;
+}
+
+.tab-default {
+   @apply bg-social-300 text-social-500 ;
+}
+
+.tab-active {
+   @apply  bg-white;
+}
